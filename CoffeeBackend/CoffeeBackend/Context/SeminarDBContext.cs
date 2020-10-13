@@ -13,7 +13,7 @@ namespace CoffeeBackend.Context
         public DbSet<Student> students { get; set; }
         public DbSet<Teacher> teachers { get; set; }
    
-        public SeminarDBContext(DbContextOptions<SeminarDBContext> options)
+        public SeminarDBContext(DbContextOptions<SeminarDBContext> options) : base(options)
         {
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
